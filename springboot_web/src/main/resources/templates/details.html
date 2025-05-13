@@ -7,6 +7,9 @@
     <title>SpringBoot</title>
 </head>
 <body>
-    <h1>Hola Mundo</h1>
+    <h1 th:text="${mensaje}"></h1>
+    <h2>Bienvenida! <span th:text="${usuario}"></span></h2>
+    <img th:src="@{/img/canelita.jpeg}" style="width: 250px; height: 250px;" alt="">
+
 </body>
 </html>

@@ -5,9 +5,11 @@ import org.springframework.ui.Model ;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ale.springboot.appweb.springboot_web.dto.UserDto;
 import com.ale.springboot.appweb.springboot_web.models.Usuario;
 
 import java.util.Map;
+import java.util.HashMap;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,14 +20,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public class UserRestControlador 
 {
-    @GetMapping("/details")
-    
-    public Map<String, Object> detailsMap{
+    @GetMapping("/details-map")
+    public UserDto details(){
+        UserDto userDto = new UserDto();
         Usuario usuario = new Usuario("ale", "reyes", "ale.reyesd@duocuc.cl");
-       Map<String, Object> body=new HashMap<>();
-       body.put("mensaje", "holi");
-       body.put("usuario", "ale");
-       return body;
+
+       
+       userDto.setUser(usuario);
+       userDto.setTitulo("holaaaa :D");
+       return userDto;
     }
     
 }
