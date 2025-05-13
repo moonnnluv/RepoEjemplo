@@ -9,7 +9,9 @@ import com.ale.springboot.appweb.springboot_web.dto.UserDto;
 import com.ale.springboot.appweb.springboot_web.models.Usuario;
 
 import java.util.Map;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,3 +34,5 @@ public class UserRestControlador
     }
     
 }
+    
+

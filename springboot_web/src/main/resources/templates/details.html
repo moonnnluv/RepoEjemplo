@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>SpringBoot</title>
 </head>
 <body>
+    
     <h1 th:text="${mensaje}"></h1>
-    <h2>Bienvenida! <span th:text="${usuario}"></span></h2>
-    <img th:src="@{/img/canelita.jpeg}" style="width: 250px; height: 250px;" alt="">
+    <ul>
+        <li>Nombre Usuario: <span th:text="${user.Nombre}"></span></li>
+        <li>Apellido: <span th:text="${user.Apellido}"></span></li>
+        <li th:if="${user.correo!=null}" th:text="'Correo: ' + ${user.correo}"></li>
+        <li th:unless="${user.correo!=null}" th:text="'Correo: No Disponible'"></li>
+    </ul>
 
 </body>
 </html>
