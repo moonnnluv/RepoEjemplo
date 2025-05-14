@@ -9,7 +9,10 @@ import java.util.List;
 public interface PersonRepository extends CrudRepository<Person, Long> {
     List<Person> findByLenguajes(String lenguajes);
 
-    @Query("select p from Person p where p.Lenguajes=?1 and p.nombre=?2")
+
+    // NO APARECE EN EL PersonRepository DE LA PROFE !!!
+
+    @Query("select p from Person p where p.lenguajes=?1 and p.nombre=?2")
     List<Person> buscarLenguajeyNombre(String lenguajes, String nombre);
 
 
